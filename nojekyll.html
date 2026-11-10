@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffe6ee">
+<title>I love you</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffe6ee;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh; /* fits the screen even with the phone's address bar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+    box-sizing: border-box;
+  }
+  svg {
+    width: min(45vw, 180px);
+    height: auto;
+    animation: beat 1.4s ease-in-out infinite;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 12vw, 4.5rem);
+    color: #e3173d;
+    white-space: nowrap;
+    text-align: center;
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.12); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    svg { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 32 29.6" aria-hidden="true">
+    <path fill="#e3173d" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+  </svg>
+  <h1>I love you</h1>
+</body>
+</html>
